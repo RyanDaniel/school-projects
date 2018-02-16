@@ -43,6 +43,26 @@ class List {
     return true;
   }
 
+  public boolean remove(int value) {
+    if(!contains(value)) {
+      return false;
+    }
+    if(head.getValue() == value) {
+      head = head.getNext();
+      return true;
+    } else {
+      Node tmp = head;
+      while(tmp != null) {
+        if(tmp.getNext().getValue() == value) {
+          tmp.setNext(tmp.getNext().getNext());
+          return true;
+        }
+        tmp = tmp.getNext();
+      }
+    }
+    return false;
+  }
+
   @Override
   public String toString() {
     String out = "[";
