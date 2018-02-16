@@ -8,6 +8,10 @@ class List {
     head = null;
   }
 
+  public boolean empty() {
+    return head == null;
+  }
+
   public boolean contains(int value) {
     Node tmp = head;
     while(tmp != null) {
