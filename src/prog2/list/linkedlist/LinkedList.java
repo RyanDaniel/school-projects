@@ -23,6 +23,20 @@ class List {
     return false;
   }
 
+  @Override
+  public String toString() {
+    String out = "[";
+    Node tmp = head;
+    while(tmp != null) {
+      out += tmp.getValue();
+      if(tmp.getNext() != null) {
+        out += ", ";
+      }
+      tmp = tmp.getNext();
+    }
+    return out + "]";
+  }
+
   private class Node {
 
     private final int value;
