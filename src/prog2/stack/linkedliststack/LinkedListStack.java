@@ -21,9 +21,9 @@ class Stack {
   }
 
   public int pop() {
-    int temp = top.getValue();
+    int tmp = top.getValue();
     top = top.getNext();
-    return temp;
+    return tmp;
   }
 
   private class Node {
