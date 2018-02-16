@@ -23,6 +23,14 @@ class List {
     return false;
   }
 
+  public boolean addFirst(int value) {
+    if(contains(value)) {
+      return false;
+    }
+    head = new Node(value, head);
+    return true;
+  }
+
   @Override
   public String toString() {
     String out = "[";
