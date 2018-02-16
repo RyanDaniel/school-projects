@@ -31,6 +31,18 @@ class List {
     return true;
   }
 
+  public boolean addLast(int value) {
+    if(contains(value)) {
+      return false;
+    }
+    Node tmp = head;
+    while(tmp.getNext() != null) {
+      tmp = tmp.getNext();
+    }
+    tmp.setNext(new Node(value, null));
+    return true;
+  }
+
   @Override
   public String toString() {
     String out = "[";
