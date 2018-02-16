@@ -8,6 +8,17 @@ class List {
     head = null;
   }
 
+  public boolean contains(int value) {
+    Node tmp = head;
+    while(tmp != null) {
+      if(tmp.getValue() == value) {
+        return true;
+      }
+      tmp = tmp.getNext();
+    }
+    return false;
+  }
+
   private class Node {
 
     private final int value;
